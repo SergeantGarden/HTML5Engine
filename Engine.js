@@ -105,7 +105,7 @@ function Engine(resolution, title, canvasParent, folderPath)
             {
                 if(engine.input.keyboard.keyPressed(KEY_CODE.PLUS)) Engine.SetAudioVolume((Engine.audioVolume + 0.1));
                 if(engine.input.keyboard.keyPressed(KEY_CODE.SUBTRACT)) Engine.SetAudioVolume((Engine.audioVolume - 0.1));
-                engine.input.Update(dt/1000);
+                engine.input.Update(engine.input, dt/1000);
             }
             engine.lastFrame = now;
             if(engine.gameTitle !== Engine.selectedGame)
