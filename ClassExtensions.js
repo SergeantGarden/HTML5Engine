@@ -33,5 +33,22 @@ if(!Array.prototype.hasOwnProperty('removeOverlayElements'))
         }
     });
 }
+if(!Array.prototype.hasOwnProperty('removeElement'))
+{
+    Object.defineProperty(Array.prototype, 'removeElement', {
+        enumerable: false,
+        value: function(element)
+        {
+            var index = this.indexOf(element);
+            var removedElement = false;
+            if(index > -1) 
+            {
+                removedElement = this[index];
+                this.splice(index, 1);
+            }
+            return removedElement;
+        }
+    });
+}
 
 
