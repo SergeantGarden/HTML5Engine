@@ -535,7 +535,7 @@ function Engine(resolution, title, canvasParent, folderPath)
         
         return image;
     }
-    engine.PreloadScripts([Engine.engineFolderPath + "ExtendedMath.js", Engine.engineFolderPath + "Sprite.js", Engine.engineFolderPath + "Animation.js", Engine.engineFolderPath + "Collision.js", Engine.engineFolderPath + "GameObject.js", Engine.engineFolderPath + "Scene.js", Engine.engineFolderPath + "Particle.js", Engine.engineFolderPath + "Emitter.js", Engine.engineFolderPath + "ReadTextFile.js"]);
+    engine.PreloadScripts([Engine.engineFolderPath + "ExtendedMath.js", Engine.engineFolderPath + "ClassExtensions.js", Engine.engineFolderPath + "Sprite.js", Engine.engineFolderPath + "Animation.js", Engine.engineFolderPath + "Collision.js", Engine.engineFolderPath + "GameObject.js", Engine.engineFolderPath + "Scene.js", Engine.engineFolderPath + "Particle.js", Engine.engineFolderPath + "Emitter.js", Engine.engineFolderPath + "ReadTextFile.js"]);
     
     return engine;
 };
