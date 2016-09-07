@@ -14,6 +14,24 @@
  *  limitations under the License.
  */
 
+if(!Array.prototype.hasOwnProperty('indexOf'))
+{
+    Object.defineProperty(Array.prototype, 'indexOf', {
+        enumerable: false,
+        value: function(value, start)
+        {
+            start = start || 0;
+            var l = this.length;
+            while(start < l)
+            {
+                if(this[start] === value) return start;
+                ++start;
+            }
+            return -1;
+        }
+    });
+}
+
 if(!Array.prototype.hasOwnProperty('removeOverlayElements'))
 {
     Object.defineProperty(Array.prototype, 'removeOverlayElements', {
